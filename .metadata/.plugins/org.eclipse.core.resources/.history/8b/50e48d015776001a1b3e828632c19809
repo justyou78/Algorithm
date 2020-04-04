@@ -1,0 +1,7 @@
+배운점!
+1. 알고리즘 생각 조차못했어... 간단했지만 생각하기 어려웠어. (두 스트링을 이어붙여 누가더 큰지 비교하여 swap해주거나 냅두는 과정)
+2. comparator 사용방법을 알게 되었지. 
+(1) implements 해주고
+(2) compare 오버라이딩
+(3) (o2,o1).compareTo(o1,o2) 내림차순
+(4) Arrays.sort(st, new class명)

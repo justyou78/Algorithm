@@ -1,0 +1,3 @@
+배운점!
+String 같은경우 substring으로 일정 범위의 스트링 값을 가져올 수 있어.
+int형 배열의 경우(int arr[]) Arrays.copyofrange(arr,firstIndex, lastIndex)로 일정범위의 값을 가져올 수있어.
