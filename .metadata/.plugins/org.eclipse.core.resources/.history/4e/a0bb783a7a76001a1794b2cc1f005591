@@ -1,0 +1,13 @@
+package Greeedy;
+
+public class Programers42860 {
+	public int solution(String name) {
+        int answer = 0;
+        // 0 2 1
+        
+        char[] words = name.toCharArray();
+        
+        
+        return answer;
+    }
+}

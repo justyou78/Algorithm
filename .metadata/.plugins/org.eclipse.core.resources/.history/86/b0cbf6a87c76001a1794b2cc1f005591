@@ -1,0 +1,47 @@
+package Greeedy;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Programers42860 {
+	public int solution(String name) {
+		int answer = 0;
+		// 0 2 1
+
+		char[] words = name.toCharArray();
+		int len = words.length;
+		Queue<Integer> queue = new LinkedList<Integer>();
+		queue.add(0);
+		while(queue.isEmpty()) {
+			int i = queue.poll();
+			
+		}
+		for (int i = 0; i < words.length; i++) {
+			int leftCount = i;
+			int rightCount = i;
+
+			answer += Math.min(words[i] - 'A', Math.abs('A' - words[i]));
+			while (true) {
+				leftCount--;
+				if (leftCount > 0 &&) {
+					leftCount--;
+				} else {
+					break;
+				}
+			}
+			while (true) {
+				rightCount++;
+				if (!(rightCount < len && words[rightCount] == 'A')) {
+					break;
+				}	
+			}
+			
+			answer += Math.min(Math.abs(leftCount)-i, rightCount-i);
+			
+			
+
+		}
+
+		return answer;
+	}
+}

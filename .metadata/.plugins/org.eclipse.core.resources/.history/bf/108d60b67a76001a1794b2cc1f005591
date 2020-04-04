@@ -1,0 +1,17 @@
+package Greeedy;
+
+public class Programers42860 {
+	public int solution(String name) {
+        int answer = 0;
+        // 0 2 1
+        
+        char[] words = name.toCharArray();
+        for (int i = 0; i < words.length; i++) {
+			System.out.println(words[i] - 'A'); //위
+			System.out.println(Math.abs('A' - words[i])); //아래
+			
+		}
+        
+        return answer;
+    }
+}

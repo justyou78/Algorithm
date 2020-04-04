@@ -1,0 +1,39 @@
+package Greeedy;
+
+public class Programers42860 {
+	public int solution(String name) {
+		int answer = 0;
+		// 0 2 1
+
+		char[] words = name.toCharArray();
+		int len = words.length;
+
+		for (int i = 0; i < words.length; i++) {
+			int leftCount = i;
+			int rightCount = i;
+
+			answer += Math.min(words[i] - 'A', Math.abs('A' - words[i]));
+			while (true) {
+				if (leftCount > 0) {
+					leftCount--;
+				}
+				else {
+					break;
+				}
+			}
+			while (true) {
+				rightCount++;
+				if (rightCount < len) {
+					rightCount++;
+					if(rightCount)
+				}
+				else {
+					break;
+				}
+			}
+
+		}
+
+		return answer;
+	}
+}
