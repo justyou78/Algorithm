@@ -1,0 +1,58 @@
+package dp.backjoon2156;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		/*
+		 * 최대로 마실 수 있도록한다.
+		 * 연속해서 3잔은 마실 수 없다.
+		 * n 1~10000 잔의 갯수
+		 * 양은 100이하 
+		 * 최대 크기 백만 가능
+		 * 
+		 * 
+		 * 
+		*/
+		
+		
+		int n = Integer.parseInt(br.readLine());
+		int grape[] = new int[n+1];
+		int dp[] = new int[n+1];
+		for (int i = 1; i <= n; i++) {
+			grape[i] = Integer.parseInt(br.readLine());
+		}
+		/*
+		dp[n-3] + gr[n-1] + gr[n];
+		dp[n-2] + gr[n];
+		dp[n-1];*/
+		
+		dp[1] = grape[1];
+		dp[2] = grape[1]+grape[2];
+		
+		
+		if(n == 1) {
+			System.out.println(dp[n]);
+			return;
+		}
+		if(n == 2) {
+			System.out.println(dp[n]);
+			return;
+		}
+		
+		for (int i = 3; i <= n; i++) {
+			int max = Math.max(dp[i-3]+grape[i-1]+grape[i], dp[n-1]);
+			dp[i] = Math.max(max, dp[n-2]+grape[n]);
+			
+		}
+		System.out.println(dp[n]);
+		
+		
+		
+		
+		
+	}
+}
