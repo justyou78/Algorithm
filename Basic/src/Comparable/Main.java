@@ -55,4 +55,27 @@ class Point implements Comparable<Point>{
 		}
 		return -1;
 	}
+	
+}
+
+//스트링을 비교할때
+class StringPoint implements Comparable<StringPoint>{
+	String s;
+	
+	
+	public StringPoint(String s) {
+		this.s = s;
+		
+		
+	}
+
+
+	
+
+
+	@Override
+	public int compareTo(StringPoint o) {
+		return this.s.compareTo(o.s);
+	}
+	
 }
