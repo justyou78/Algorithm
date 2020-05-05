@@ -40,7 +40,4 @@ public class Main {
 		}
 	}
 
-	public int rightCount(String name) {
-
-	}
 }
